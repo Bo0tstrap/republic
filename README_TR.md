@@ -242,3 +242,32 @@ republicd tx staking create-validator \
 
 <img width="918" height="444" alt="image" src="https://github.com/user-attachments/assets/412665f6-5b45-4e2a-bd67-8500d1dcf47d" />
 
+
+
+## Güncel Peer & İçin ; 
+
+```bash
+URL="https://rpc.republicai.io/net_info"
+```
+
+```bash
+response=$(curl -s $URL)
+```
+
+```bash
+PEERS=$(echo $response | jq -r '.result.peers[] | select(.remote_ip | test("^[0-9]{1,3}(\\.[0-9]{1,3}){3}$")) | "\(.node_info.id)@\(.remote_ip):" + (.node_info.listen_addr | capture(":(?<port>[0-9]+)$").port)' | paste -sd "," -)
+```
+
+```bash
+echo "PEERS=\"$PEERS\""
+```
+
+```bash
+sed -i 's|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.republicd/config/config.toml
+```
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable republicd
+sudo systemctl start republicd
+```
