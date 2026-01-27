@@ -178,3 +178,15 @@ journalctl -u republicd -f
 ```bash
 republicd status | jq '.sync_info'
 ```
+
+## Genel Cüzdan Oluşturma & Validatör Kurulum ; 
+
+```bash
+republicd keys add $REPUBLIC_WALLET
+```
+
+- Sizden cüzdan için şifre isteyecek yazacaksınız unutmayacağınız birşey olsun, sonrasında bir daha doğrulamak için isteyecek yazacaksınız. Görünmezdir o yüzden yazdığınızdan emin olun.
+- Karaladığın yerde cüzdan kelimeleriniz var onları kimseyle paylaşmayın kaydedin.
+
+<img width="931" height="250" alt="image" src="https://github.com/user-attachments/assets/1ab87988-a630-4c3d-ac1e-0f0bd27b2d74" />
+
