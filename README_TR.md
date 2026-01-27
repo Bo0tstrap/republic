@@ -174,10 +174,8 @@ sudo systemctl start republicd
 journalctl -u republicd -f
 ```
 
-## 15. SYNC Kontrol ; 
-```bash
-republicd status | jq '.sync_info'
-```
+- Loglardaki block sayısı explorer ile uyuşuyorsa SYNC olmuşsunuz demektir.
+- Explorer : https://explorer.republicai.io/blocks
 
 ## Genel Cüzdan Oluşturma & Validatör Kurulum ; 
 
