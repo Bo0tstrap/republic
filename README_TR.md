@@ -220,3 +220,6 @@ republicd tx staking create-validator \
 --node tcp://localhost:43657
 ```
 
+- Validatör Explorer Kontrol ; 
+
+- Link : https://explorer.republicai.io/validators
