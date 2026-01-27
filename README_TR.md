@@ -206,23 +206,33 @@ republicd keys add $REPUBLIC_WALLET
 - Validatör Oluşturma ;
 
 ```bash
-republicd tx staking create-validator \
---amount 1000000000000000000000arai \
---pubkey="$(republicd tendermint show-validator --node tcp://localhost:43657)" \
---moniker "Validator Adiniz" \
---identity "keybaseidnizyoksabosbirakabilirsiniz" \
---details "Aciklamakismi" \
---website "website linkiniz yoksa twitter linkiniz" \
---commission-rate "0.05" \
---commission-max-rate "0.15" \
---commission-max-change-rate "0.02" \
---min-self-delegation "1" \
+PUBKEY=$(jq -r '.pub_key.value' $HOME/.republicd/config/priv_validator_key.json)
+
+cat > validator.json << EOF
+{
+  "pubkey": {"@type":"/cosmos.crypto.ed25519.PubKey","key":"$PUBKEY"},
+  "amount": "20000000000000000000arai",
+  "moniker": "validator ismin",
+  "identity": "keybaseidlazimyoksabosbirak",
+  "website": "web sitesi yoksa twitter link koy",
+  "security": "mailadresi",
+  "details": "validatoraciklaması",
+  "commission-rate": "0.05",
+  "commission-max-rate": "0.15",
+  "commission-max-change-rate": "0.02",
+  "min-self-delegation": "1"
+}
+EOF
+
+republicd tx staking create-validator validator.json \
 --from $REPUBLIC_WALLET \
 --chain-id raitestnet_77701-1 \
 --gas auto \
 --gas-adjustment 1.5 \
---gas-prices "250000000arai" \
---node tcp://localhost:43657
+--gas-prices "1000000000arai" \
+--node tcp://localhost:43657 \
+-y
+
 ```
 
 - Validatör Explorer Kontrol ; 
