@@ -7,7 +7,7 @@
 | **CPU**          | 4+ | 8++ |
 | **RAM**          | 16+  | 16++ GB                   |
 | **Disk**      | 500GB NVME SSD| 500+ NVME GB SDD                   |
-| **UBUNTU**      | UBUNTU 22.04 | + |
+| **UBUNTU**      | UBUNTU 24.04 | + |
 
 
 - Web : https://republicai.io
