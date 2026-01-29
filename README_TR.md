@@ -282,7 +282,9 @@ sudo systemctl enable republicd
 sudo systemctl start republicd
 ```
 
-## Çeşitli Kodlar & Stake vb.
+## Çeşitli Kodlar & Delege vb.
+
+#### Delege ; 
 
 - Token Karşılığı ; 10000000000000000000arai : 10 Adet Token ( Komutta 10 Adet Olan Ekli ) 
 - Token Karşılığı ; 1000000000000000000arai : 1 Adet Token
