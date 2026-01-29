@@ -281,3 +281,27 @@ sudo systemctl daemon-reload
 sudo systemctl enable republicd
 sudo systemctl start republicd
 ```
+
+## Çeşitli Kodlar & Stake vb.
+
+- Token Karşılığı ; 10000000000000000000arai : 10 Adet Token ( Komutta 10 Adet Olan Ekli ) 
+- Token Karşılığı ; 1000000000000000000arai : 1 Adet Token
+
+```bash
+republicd tx staking delegate validatorvaloperadresi \
+10000000000000000000arai \
+--from wallet \
+--chain-id raitestnet_77701-1 \
+--gas auto \
+--gas-adjustment 1.5 \
+--gas-prices 1000000000arai \
+--node tcp://localhost:43657 \
+-y
+```
+
+- Valoper Adres Nasıl Alınır ?
+
+- Explorer : https://explorer.rpcdot.com/republic-testnet/staking
+
+<img width="1047" height="861" alt="image" src="https://github.com/user-attachments/assets/d885087b-204f-405b-93c0-b04ab4d20a5b" />
+
