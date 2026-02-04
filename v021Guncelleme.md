@@ -20,6 +20,9 @@ wget -O republicd_v021 https://github.com/RepublicAI/networks/releases/download/
 ```bash
 echo "d10991b623fa62ee0f3c42ad15abbaa246f89d73a82736fad090e607b7cc4b8f  republicd_v021" | sha256sum -c
 ```
+
+<img width="1244" height="88" alt="image" src="https://github.com/user-attachments/assets/f1fc330b-c713-4299-99a1-29c92d52ca0a" />
+
 # 5. Yetkiyi Verelim
 ```bash
 chmod +x republicd_v021
@@ -62,6 +65,8 @@ wget -O republicd_v0.2.1 https://github.com/RepublicAI/networks/releases/downloa
 ```bash
 echo "d10991b623fa62ee0f3c42ad15abbaa246f89d73a82736fad090e607b7cc4b8f  republicd_v0.2.1" | sha256sum -c
 ```
+<img width="1244" height="88" alt="image" src="https://github.com/user-attachments/assets/a12dd09c-5bed-48b1-b35f-e505ef8ada10" />
+
 
 # 4. Yetkiyi Verelim
 ```bash
