@@ -41,6 +41,9 @@ sudo systemctl start republicd
 sudo journalctl -u republicd -f
 ```
 
+<img width="480" height="144" alt="image" src="https://github.com/user-attachments/assets/aa1011c8-7171-4c5e-a4e9-0ae3d6abda4c" />
+
+
 # COSMOVİSORSÜZ KURANLAR İÇİN ; 
 
 
