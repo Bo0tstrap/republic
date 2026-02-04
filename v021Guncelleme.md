@@ -33,6 +33,8 @@ sudo mv republicd republicd_v0.2.0_backup
 sudo mv republicd_v021 republicd
 ```
 
+- CLI Komutları için Güncelleme
+
 ```bash
 cd
 ```
