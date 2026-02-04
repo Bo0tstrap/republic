@@ -1,3 +1,7 @@
+
+# COSMOVİSOR İLE KURANLAR İÇİN ; 
+
+
 # 1. Nodeyi Durduralım
 ```bash
 sudo systemctl stop republicd
@@ -24,6 +28,50 @@ chmod +x republicd_v2
 ```bash
 sudo mv republicd republicd_v0.1.0_backup
 sudo mv republicd_v2 republicd
+```
+# 7. Başlatalım
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable republicd
+sudo systemctl start republicd
+```
+
+# 8. Logları Kontrol Edelim
+```bash
+sudo journalctl -u republicd -f
+```
+
+# COSMOVİSORSÜZ KURANLAR İÇİN ; 
+
+
+# 1. Nodeyi Durduralım
+```bash
+sudo systemctl stop republicd
+```
+# 2. Yeni binary’yi indir (v0.2.0)
+```bash
+cd /usr/local/bin
+
+wget -O republicd_v0.2.0 https://github.com/RepublicAI/networks/releases/download/v0.2.0/republicd-linux-amd64
+```
+
+# 3. SHA256 checksum doğrula ✅
+```bash
+echo "0788832a9f88fedfe1e2896391dd4bdb944aca85ae0632f3d30e09743a455b65  republicd_v0.2.0" | sha256sum -c
+```
+
+# 4. Doğrulayalım
+```bash
+echo "0788832a9f88fedfe1e2896391dd4bdb944aca85ae0632f3d30e09743a455b65  republicd_v2" | sha256sum -c
+```
+# 5. Yetkiyi Verelim
+```bash
+chmod +x republicd_v0.2.0
+```
+# 6. Eski Binary'i Yedekliyip Yeniyi Koyalım
+```bash
+sudo mv republicd republicd_v0.1.0_backup
+sudo mv republicd_v0.2.0 republicd
 ```
 # 7. Başlatalım
 ```bash
