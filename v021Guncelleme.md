@@ -40,10 +40,10 @@ cd
 ```
 ```bash
 cd /usr/local/bin
-mv republicd republicd_backup_pre_v0.2.0
+sudo mv republicd republicd_backup_pre_v0.2.0
 ```
 ```bash
-cp $HOME/.republicd/cosmovisor/genesis/bin/republicd /usr/local/bin/republicd
+sudo cp $HOME/.republicd/cosmovisor/genesis/bin/republicd /usr/local/bin/republicd
 ```
 ```bash
 chmod +x /usr/local/bin/republicd
