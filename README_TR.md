@@ -323,3 +323,8 @@ republicd tx slashing unjail \
 --node tcp://localhost:43657 \
 -y
 ```
+
+## Ödülleri Çekme ; 
+```bash
+republicd tx distribution withdraw-rewards $(republicd keys show wallet --bech val -a) --commission --from wallet --chain-id raitestnet_77701-1 --gas-prices=0.025arai --gas-adjustment=1.5 --gas=auto --node tcp://localhost:43657 -y
+```
