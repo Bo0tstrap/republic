@@ -46,7 +46,7 @@ chmod +x republicd
 ```bash
 sudo systemctl stop republicd
 ```
-# 2. Yeni binary’yi indir (v0.2.1)
+# 2. Yeni binary’yi indir (v0.3.0)
 ```bash
 cd /usr/local/bin
 
